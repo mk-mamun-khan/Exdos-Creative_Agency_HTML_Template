@@ -1,0 +1,68 @@
+@use '../../utils' as *;
+
+
+/*----------------------------------------*/
+/*  3.2 Mobile Menu
+/*----------------------------------------*/
+
+.mk-offcanvas-menu ul li {
+    position: relative;
+
+    &>a {
+        padding: 8px 0;
+        display: block;
+        font-size: 16px;
+        font-weight: 500;
+
+        &:hover {
+            color: var(--tp-theme-color);
+        }
+    }
+
+    &:not(:last-child) {
+        &>a {
+            border-bottom: 1px solid rgba(1, 15, 28, 0.12);
+        }
+    }
+
+    &.active {
+        &>a {
+            color: var(--tp-theme-color);
+        }
+
+        &>.mk-menu-close {
+            border-color: var(--tp-theme-color);
+            color: #fff;
+            background-color: var(--tp-theme-color);
+
+            & i {
+                @include transform(rotate(90deg));
+            }
+        }
+    }
+
+    & .sub-menu {
+        display: none;
+        padding-left: 20px;
+    }
+}
+
+.mk-menu-close {
+    position: absolute;
+    right: 0;
+    top: 7px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(1, 15, 28, 0.12);
+    text-align: center;
+    font-size: 13px;
+
+    & i {
+        @include transition(.3s);
+    }
+    &:hover{
+        color: #fff;
+        background-color: var(--tp-theme-color);
+        border-color: var(--tp-theme-color);
+    }
+}

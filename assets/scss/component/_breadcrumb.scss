@@ -1,0 +1,78 @@
+@use '../utils' as *;
+
+
+/*----------------------------------------*/
+/*  2.3 Breadcrumb
+/*----------------------------------------*/
+
+.mk-breadcrumb {
+    &-space {
+        padding-top: 240px;
+        padding-bottom: 140px;
+    }
+
+    &-title {
+        font-size: 70px;
+
+        @media #{$xs} {
+            font-size: 50px;
+        }
+    }
+
+    &-list {
+
+        & span {
+            margin: 0 2px;
+            display: inline-block;
+            color: #B1B4BA;
+
+            &.active {
+                & a {
+                    color: var(--tp-theme-color-2);
+                }
+            }
+
+            & a {
+                color: #B1B4BA;
+                font-size: 20px;
+            }
+
+            &.dvir {
+                margin: 0 2px;
+
+            }
+        }
+    }
+}
+
+.mk-breadcrumb-shape {
+    &-1 {
+        left: 12%;
+        top: 42%;
+        z-index: 1;
+
+        @media #{$xs} {
+            left: 8%;
+        }
+    }
+
+    &-2 {
+        right: 33%;
+        top: 30%;
+        z-index: 1;
+
+        @media #{$xs} {
+            top: 24%;
+        }
+    }
+
+    &-3 {
+        right: 10%;
+        top: 41%;
+        z-index: 1;
+
+        @media #{$xs} {
+            right: 5%;
+        }
+    }
+}

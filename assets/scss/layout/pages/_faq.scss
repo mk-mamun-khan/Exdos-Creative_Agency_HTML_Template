@@ -1,0 +1,35 @@
+@use '../../utils' as *;
+
+
+/*----------------------------------------*/
+/*  6.7 Faq
+/*----------------------------------------*/
+
+
+.mkfaq-bg {
+    position: absolute;
+    height: 100%;
+    width: calc(50% - 65px);
+    left: 0;
+    border-radius: 0 20px 20px 0;
+    background-size: cover;
+    background-position: center;
+
+    @media #{$md,$xs} {
+        width: 100%;
+        height: 500px;
+        border-radius: 0;
+        position: static;
+        margin-bottom: 30px;
+    }
+
+    @media #{$xs} {
+        height: 300px;
+    }
+
+    &-right {
+        left: auto;
+        right: 0;
+        border-radius: 0px 0 0 0px;
+    }
+}

@@ -1,0 +1,168 @@
+@use '../../utils' as *;
+
+
+/*----------------------------------------*/
+/*  6.12 Process
+/*----------------------------------------*/
+
+.mkprocess {
+    &-border {
+        border: 1px solid #57595C;
+        padding: 60px 35px;
+        border-radius: 165px;
+    }
+
+    &__step {
+        & span {
+            padding: 1px 23px;
+            background-color: var(--tp-theme-orange);
+            display: inline-block;
+            border-radius: 15px;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 500;
+            text-transform: uppercase;
+            @include transition(.3s);
+        }
+    }
+
+    &:hover {
+        & .mkprocess__step {
+            & span {
+                background-color: var(--tp-theme-color);
+            }
+        }
+    }
+
+    &__title {
+        font-size: 30px;
+    }
+
+    &__angle {
+        @media #{$xs} {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__icon {
+        & span {
+            font-size: 85px;
+            background: #FFE9C9;
+            display: inline-block;
+            color: #000;
+            width: 150px;
+            height: 150px;
+            line-height: 175px;
+            border-radius: 100%;
+        }
+
+        &-2 {
+            & span {
+                width: 259px;
+                height: 259px;
+                font-size: 150px;
+                color: #000;
+                line-height: 250px;
+                text-align: center;
+                margin: auto;
+            }
+
+            &-pos {
+                & span {
+                    line-height: 350px;
+                }
+
+                & .mkprocess__count {
+                    bottom: inherit;
+                    top: -20px;
+                }
+            }
+
+            &-width {
+                & span {
+                    width: 249px;
+                    height: 249px;
+                }
+            }
+        }
+    }
+
+    &__count {
+        width: 77px;
+        height: 77px;
+        background: #FF3838;
+        color: #fff;
+        font-size: 30px;
+        text-align: center;
+        line-height: 62px;
+        border-radius: 50%;
+        font-family: var(--tp-fonts-header);
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        border: 8px solid #fff;
+    }
+}
+
+.mkprocess__shape {
+    left: 0;
+    bottom: -44px;
+
+    &-2 {
+        bottom: -38px;
+        left: -5px;
+    }
+
+    &-3 {
+        top: -40px;
+        left: -5px;
+    }
+
+    &-4 {
+        left: -3px;
+        top: -47px;
+    }
+}
+
+.mkprocess {
+    &-1 {
+        margin-top: 25px;
+
+        @media #{$xs} {
+            margin-bottom: 50px;
+            margin-top: 0px;
+        }
+    }
+
+    &-2 {
+        margin-top: -9px;
+
+        @media #{$xs} {
+            margin-top: 0px;
+        }
+    }
+
+    &-3 {
+        margin-top: 25px;
+
+        @media #{$xs} {
+            margin-bottom: 50px;
+        }
+    }
+
+    &-4 {
+        margin-top: -9px;
+
+        @media #{$xs} {
+            margin-top: 0px;
+        }
+    }
+}
+
+.mkprocess__content {
+    @media #{$xs} {
+        margin-top: 30px;
+    }
+}

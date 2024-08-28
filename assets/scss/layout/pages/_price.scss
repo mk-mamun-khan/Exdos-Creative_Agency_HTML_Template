@@ -1,0 +1,102 @@
+@use '../../utils' as *;
+
+
+/*----------------------------------------*/
+/*  6.11 Pricing
+/*----------------------------------------*/
+
+.mkprice {
+    padding: 50px;
+    border-radius: 20px;
+    border: 1px solid #FDF6F2;
+    @include transition(.3s);
+
+    &__icon {
+        position: relative;
+        margin-bottom: 5px;
+
+        & span {
+            font-size: 115px;
+            position: relative;
+            z-index: 1;
+            margin-left: 23px;
+        }
+
+        &-shape {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    &__price {
+        & h4 {
+            font-size: 70px;
+        }
+    }
+
+    &__title {
+        font-size: 30px;
+    }
+
+    &__features {
+        & li {
+            color: #57595C;
+            margin-bottom: 12px;
+            display: flex;
+
+            & i {
+                font-size: 18px;
+                margin-right: 10px;
+                margin-top: 5px;
+            }
+
+            & span {
+                font-size: 17px;
+            }
+        }
+    }
+
+    &__sep {
+        border: 1px solid #57595C;
+        margin-top: 24px;
+        margin-bottom: 20px;
+    }
+
+    & .mk-price-btn {
+        & .orange {
+            @include transition(.3s);
+
+            & i {
+                @include transition(.3s);
+            }
+        }
+        & .orange-2 {
+            @include transition(.3s);
+
+            & i {
+                @include transition(.3s);
+            }
+        }
+    }
+
+    &:hover {
+        border-color: #57595C;
+
+        & .orange {
+            background: var(--tp-theme-color);
+
+            & i {
+                background: #71A2FF;
+            }
+        }
+        & .orange-2 {
+            background: var(--tp-theme-color-2);
+            color: var(--tp-heading-color);
+
+            & i {
+                background: #E5CF00;
+            }
+        }
+    }
+}

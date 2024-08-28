@@ -1,0 +1,94 @@
+@use '../utils' as *;
+
+
+/*----------------------------------------*/
+/*  2.1 Accordion
+/*----------------------------------------*/
+
+.mk-accordion {
+    &-item {
+        border: 1px solid #57595c;
+        border-radius: 10px;
+    }
+
+    &-header {
+        margin: 0;
+    }
+
+    &-button {
+        font-size: 20px;
+        color: #0a0e1a;
+        padding: 23px 30px;
+        width: 100%;
+        text-align: left;
+        @include flexbox();
+        justify-content: space-between;
+
+        & span {
+            font-size: 16px;
+            margin-left: 20px;
+            color: #0057fc;
+        }
+
+        &.collapsed {
+            & span {
+                @include transform(rotate(-90deg));
+                color: #57595c;
+            }
+        }
+    }
+
+    &-body {
+        border-top: 1px solid #57595c;
+        margin: 0 30px;
+        padding-top: 16px;
+        padding-bottom: 6px;
+    }
+}
+
+.mk-faq {
+    &-item {
+        border-bottom: 1px solid #D9D9D9;
+        margin-bottom: 10px;
+    }
+
+    &-button {
+        text-align: left;
+        font-size: 24px;
+        padding-bottom: 12px;
+
+        &::after {
+            content: "-";
+            color: var(--tp-theme-orange);
+        }
+
+        &.collapsed {
+            &::after {
+                content: "+";
+                color: var(--tp-heading-color);
+            }
+        }
+    }
+
+    &-thumb {
+        @media #{$lg,$md,$xs} {
+            margin-left: 0;
+        }
+
+        & img {
+            max-width: inherit;
+
+            @media #{$md,$xs} {
+                max-width: 100%;
+            }
+        }
+    }
+
+    &-body {
+        padding-bottom: 17px;
+
+        & p {
+            margin-bottom: 0;
+        }
+    }
+}

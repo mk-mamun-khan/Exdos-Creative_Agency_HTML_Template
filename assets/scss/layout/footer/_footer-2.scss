@@ -1,0 +1,220 @@
+@use '../../utils' as *;
+
+
+/*----------------------------------------*/
+/*  5.2 Footer Style 2
+/*----------------------------------------*/
+
+.mk-footer-widget-title-black {
+    color: var(--tp-heading-color);
+}
+
+.mk-footer-newsletter {
+    position: relative;
+
+    & button {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+.mk-footer-social {
+    & a {
+        font-size: 25px;
+        color: #57595C;
+        margin-right: 18px;
+    }
+
+    &-2 {
+        & a {
+            color: #B1B4BA;
+
+            &:hover {
+                color: var(--tp-theme-color-2);
+            }
+        }
+    }
+}
+
+.mk-footer-newsletter {
+    .form-check-label {
+        font-size: 15px;
+        color: #57595C;
+        line-height: 1;
+    }
+
+    .form-check .form-check-input {
+        @include transform(translateY(2px));
+    }
+
+    &-2 {
+        & .form-check-label {
+            color: #B1B4BA;
+        }
+
+        & .form-check input {
+            border: 1px solid #585858;
+            --bs-form-check-bg: none;
+        }
+
+        & input {
+            color: #fff;
+
+            @include mk-placeholder() {
+                color: #B1B4BA;
+            }
+
+            &:focus {
+                border-color: #585858;
+            }
+        }
+
+        & .p-relative {
+            & button {
+                & i {
+                    color: #57595C;
+                }
+            }
+        }
+    }
+}
+
+.mk-footer-widget-2 {
+    & ul {
+        & li {
+            & a {
+                color: #57595C;
+
+                &:hover {
+                    color: var(--tp-theme-color);
+                }
+            }
+        }
+    }
+
+    & .mk-footer-info-item {
+        & span {
+            color: #57595C;
+        }
+
+        & h4 {
+            color: #0A0E1A;
+        }
+    }
+
+    & .footer-content span {
+        color: #57595C;
+    }
+}
+
+.mk-footer-2-col-2 {
+    padding-left: 80px;
+
+    @media #{$lg,$xs} {
+        padding-left: 0;
+    }
+}
+
+.mk-footer-2-col-3 {
+    padding-left: 40px;
+
+    @media #{$lg,$md,$xs} {
+        padding-left: 0;
+    }
+}
+
+.mk-footer-2-col-4 {
+    padding-left: 70px;
+
+    @media #{$lg,$md,$xs} {
+        padding-left: 0;
+    }
+}
+
+.mk-footer-4-col {
+    &-2 {
+        padding-left: 60px;
+
+        @media #{$lg,$md,$xs} {
+            padding-left: 0;
+        }
+    }
+
+    &-3 {
+        padding-left: 60px;
+
+        @media #{$lg,$md,$xs} {
+            padding-left: 0;
+        }
+    }
+
+    &-4 {
+        padding-left: 80px;
+
+        @media #{$lg,$md,$xs} {
+            padding-left: 0;
+        }
+    }
+}
+
+.mk-footer-5-col-1 {
+    @media #{$lg,$md,$xs} {
+        padding-left: 0;
+    }
+}
+
+.mk-footer-copyright-area-2 {
+    & .mk-footer-copyright {
+        & p {
+            color: #57595C;
+
+            & a {
+                color: #FF5B15;
+            }
+        }
+    }
+
+    & .mk-footer-menu {
+        & ul {
+            & li {
+                & a {
+                    color: #57595C;
+
+                    &:hover {
+                        color: var(--tp-theme-color);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mk-footer-widget-area-border {
+    border-bottom: 1px solid #57595C;
+}
+
+
+
+
+.mk-brand-section-title {
+    border-bottom: 1px solid #585a5d;
+    // margin-bottom: 60px;
+
+    & h2 {
+        color: #fafafa;
+        font-size: 30px;
+        background: #1A1A1A;
+        @include transform(translateY(19px));
+        display: inline-block;
+        margin-bottom: 0;
+        padding: 0 30px;
+
+        @media #{$xs} {
+            font-size: 23px;
+            padding: 0 4px;
+            transform: translateY(16px);
+        }
+    }
+}

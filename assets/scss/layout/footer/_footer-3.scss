@@ -1,0 +1,35 @@
+@use '../../utils' as *;
+
+
+/*----------------------------------------*/
+/*  5.3 Footer Style 3
+/*----------------------------------------*/
+
+.mk-footer-social-box {
+    & a {
+        font-size: 30px;
+        display: block;
+        border: 1px solid rgba($color: #fff, $alpha: .15);
+        text-align: center;
+        text-transform: uppercase;
+        color: #fff;
+        padding: 35px 30px;
+        border-radius: 20px;
+        font-family: var(--tp-fonts-header);
+        @include transition(.3s);
+
+        @media #{$lg} {
+            font-size: 22px;
+        }
+        @media #{$sm} {
+            font-size: 22px;
+        }
+    }
+
+    &:hover {
+        & a {
+            background-color: var(--tp-theme-orange-2);
+            border-color: var(--tp-theme-orange-2);
+        }
+    }
+}

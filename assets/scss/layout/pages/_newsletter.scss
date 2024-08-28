@@ -1,0 +1,117 @@
+@use '../../utils' as *;
+
+
+/*----------------------------------------*/
+/*  6.9 Newsletter
+/*----------------------------------------*/
+
+.mk-newsletter {
+    &-margin-top {
+        margin-top: -110px;
+    }
+
+    &-bg {
+        padding: 80px;
+        border-radius: 20px;
+
+        @media #{$xs} {
+            padding: 60px 20px;
+        }
+
+        @media #{$md} {
+            padding: 70px 30px;
+        }
+    }
+
+    &-box {
+        @media #{$lg} {
+            margin-top: 30px;
+        }
+
+        & form {
+            @include flexbox();
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            @media #{$xs} {
+                display: block;
+            }
+        }
+
+        & input {
+            border-color: #fff;
+            color: #fff;
+
+            &:focus {
+                border-color: #fff;
+                text-transform: none;
+            }
+
+            @include mk-placeholder {
+                color: #fff;
+            }
+        }
+    }
+
+    &-input {
+        width: calc(100% - 205px);
+
+        @media #{$xs} {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        & img {
+            position: absolute;
+            right: 15px;
+            top: 20px;
+        }
+        & i {
+            position: absolute;
+            right: 15px;
+            top: 20px;
+            color: #57595C;
+        }
+    }
+
+    &-bg-title {
+        color: #fff;
+        font-size: 100px;
+        opacity: .10;
+        position: absolute;
+        left: 90px;
+        bottom: -25px;
+        line-height: 1;
+        margin: 0;
+
+        @media #{$xl} {
+            font-size: 82px;
+            left: 45px;
+        }
+
+        @media #{$md} {
+            font-size: 75px;
+            left: 70px;
+        }
+    }
+
+    &-box-2 {
+        & input {
+            border-color: #57595C;
+            color: #57595C;
+
+            &:focus {
+                border-color: #57595C;
+            }
+
+            @include mk-placeholder {
+                color: #57595C;
+            }
+        }
+
+        & .mk-newsletter-bg-title {
+            opacity: 1;
+            color: #EEEBE6;
+        }
+    }
+}

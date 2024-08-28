@@ -1,0 +1,52 @@
+@use '../utils' as *;
+
+
+/*----------------------------------------*/
+/*  2.8 Search Bar
+/*----------------------------------------*/
+
+.mk-header-search-bar {
+    height: 400px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background: #fff;
+    transform: translateY(-100%);
+    transition: .3s;
+
+    &.mk-search-open {
+        transform: translateY(0);
+    }
+}
+
+.mk-search-form-box {
+    & form {
+        position: relative;
+
+        & button {
+            position: absolute;
+            right: 0;
+            top: 15px;
+            font-size: 18px;
+        }
+    }
+}
+
+.mk-search-form-box {
+    & input[type=text] {
+        text-transform: none;
+    }
+}
+
+.mk-search-close {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    font-size: 30px;
+    color: #444;
+    font-weight: 300;
+    width: 45px;
+    height: 45px;
+}

@@ -1,0 +1,288 @@
+@use '../../utils' as *;
+
+
+/*----------------------------------------*/
+/*  6.1 About
+/*----------------------------------------*/
+
+.mk-about-img {
+    @media #{$xs} {
+        margin-bottom: 40px;
+        padding-left: 0;
+    }
+
+    & img {
+        @media #{$md} {
+            width: 100%;
+        }
+    }
+}
+
+.mk-about-box {
+    @media #{$xl} {
+        padding-left: 25px;
+    }
+
+    @media #{$lg,$md,$xs} {
+        padding-left: 0px;
+    }
+}
+
+.mk-about-video {
+    @media #{$xl} {
+        padding-left: 50px;
+    }
+
+    @media #{$lg,$md,$xs} {
+        padding-left: 0px;
+    }
+
+    &-icon {
+        a {
+            width: 80px;
+            height: 80px;
+            border: 1px solid #57595C;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 77px;
+            display: inline-block;
+            &:hover{
+                background-color: var(--tp-theme-color);
+                color: #fff;
+                border-color: var(--tp-theme-color);
+            }
+        }
+    }
+
+    &-info {
+        h4 {
+            font-size: 30px;
+            color: #57595C;
+        }
+    }
+}
+
+.mk-about-shape-1 {
+    left: 0;
+    top: 25%;
+}
+
+.mk-about-shape-2 {
+    right: 0;
+    top: 0;
+}
+
+.mk-about-shape-3 {
+    top: 40%;
+    left: 35%;
+}
+
+
+.mk-about-content {
+    & ul {
+        & li {
+            margin-bottom: 20px;
+            display: flex;
+
+            & i {
+                font-size: 30px;
+                color: #000;
+                margin-right: 10px;
+                margin-top: 5px;
+            }
+
+            & span {
+                font-size: 30px;
+                line-height: 1.33;
+                color: #0a0e1a;
+                font-family: var(--tp-fonts-header);
+            }
+        }
+    }
+}
+
+.mk-about-circle-img {
+    position: absolute;
+    top: 0;
+    right: 185px;
+
+    & img {
+        max-width: inherit;
+    }
+}
+
+.mk-about {
+    &-circle {
+        width: 615px;
+        height: 596px;
+        background-color: var(--tp-theme-color-3);
+        border-radius: 100%;
+        position: absolute;
+        bottom: 0;
+
+        @media #{$lg} {
+            width: 400px;
+            height: 400px;
+        }
+
+        @media #{$xs} {
+            width: 200px;
+            height: 200px;
+        }
+    }
+
+    &-thumb {
+        &>img {
+            z-index: 2;
+            position: relative;
+        }
+
+        @media #{$xl} {
+            margin-left: 0;
+            margin-right: 50px;
+        }
+
+        @media #{$lg} {
+            margin-left: 10px;
+            margin-right: 40px;
+        }
+    }
+
+    &-wrapper {
+        @media #{$xl} {
+            padding-left: 110px;
+        }
+
+        @media #{$lg,$md,$xs} {
+            padding-left: 0px;
+        }
+    }
+
+    &-feature-icon {
+        & span {
+            font-size: 90px;
+        }
+    }
+
+    &-skill-box {
+        @media #{$lg,$md,$xs} {
+            padding-left: 0px;
+        }
+    }
+}
+
+.mk-about-3-shape {
+    &-1 {
+        left: -50px;
+        top: 140px;
+    }
+
+    &-2 {
+        top: 0;
+        right: 60px;
+    }
+}
+
+.mk-bg-circle {
+    border-radius: 360px;
+    margin: 0 100px;
+
+    @media #{$xxlm} {
+        margin: 0 30px;
+    }
+
+    @media #{$xl} {
+        margin: 0px;
+        border-radius: 250px;
+    }
+
+    @media #{$lg,$md,$xs} {
+        margin: 0px;
+    }
+
+    @media #{$md,$xs} {
+        border-radius: 0px;
+    }
+}
+
+.mk-founder-sep {
+    width: 1px;
+    height: 40px;
+    background: #FF3838;
+    margin: 25px auto;
+}
+
+.mk-founder-name {
+    &.mk-fs-30 {
+        @media #{$xs} {
+            font-size: 23px;
+        }
+    }
+}
+
+.mk-about-box-right {
+    position: absolute;
+    width: 51%;
+    right: 0;
+    top: 0;
+    background: #fff;
+
+    @media #{$lg,$md,$xs} {
+        position: static;
+        width: 100%;
+        margin-top: 80px;
+        padding-top: 45px;
+    }
+}
+
+.mk-about-fact-right-area {
+    @media #{$lg,$md,$xs} {
+        padding-bottom: 0;
+    }
+}
+
+
+.mk-exp {
+    background: var(--tp-theme-color-2);
+    padding: 25px 42px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+
+    @media #{$xs} {
+        padding: 15px;
+    }
+    @media #{$sm} {
+        padding: 25px 42px;
+    }
+
+    &-wrapper {
+        position: absolute;
+        top: -50px;
+        right: 45px;
+    }
+
+    &-bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        left: -10px;
+        bottom: -10px;
+        border-radius: 10px;
+        z-index: 1;
+    }
+
+    & h2 {
+        font-size: 100px;
+        margin-right: 25px;
+    }
+}
+
+.mk-about-exp {
+    margin-right: -30px;
+
+    @media #{$lg,$md,$xs} {
+        margin-right: 0;
+    }
+}

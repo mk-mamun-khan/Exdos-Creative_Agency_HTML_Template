@@ -1,0 +1,43 @@
+@use '../../utils' as *;
+
+
+/*----------------------------------------*/
+/*  6.3 Brand
+/*----------------------------------------*/
+
+.mk-headline-title {
+    & h3 {
+        font-size: 100px;
+        text-transform: uppercase;
+        color: #fff;
+    }
+}
+
+.grad-bg {
+    background: rgb(0, 88, 255);
+    background: radial-gradient(circle, rgba(0, 88, 255, 1) 0%, rgba(255, 76, 0, 1) 100%);
+}
+
+.mk-brand {
+    &-item-border {
+        border: 1px solid #57595C;
+        min-height: 125px;
+        @include flexbox();
+        align-items: center;
+        justify-content: center;
+        margin-right: -1px;
+        margin-bottom: -1px;
+        border-radius: 10px;
+    }
+
+    &-normal-wrapper {
+        border: 1px solid #57595C;
+        padding: 80px;
+    }
+
+    &-logo-wapper {
+        @media #{$lg,$md,$xs} {
+            padding-left: 0;
+        }
+    }
+}

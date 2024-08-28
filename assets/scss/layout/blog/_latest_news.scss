@@ -1,0 +1,150 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  4.2 Recent Post
+/*----------------------------------------*/
+
+.mkblog {
+    &__thumb {
+        & img {
+            width: 100%;
+        }
+    }
+
+    &__content {
+        @media #{$lg,$md} {
+            margin-left: 0;
+        }
+
+        &-meta {
+            width: 55px;
+            height: 170px;
+            background: #FFE4FB;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 10px;
+            @include flexbox();
+            align-items: end;
+            position: relative;
+            justify-content: center;
+            flex: 0 0 auto;
+
+            & span {
+                @include flexbox();
+                flex-direction: column-reverse;
+
+                & cite {
+                    width: 120px;
+                    position: absolute;
+                    @include transform(rotate(-90deg));
+                    left: -33px;
+                    top: 45px;
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                }
+            }
+
+            & i {
+                width: 45px;
+                height: 45px;
+                color: #57595C;
+                background: #fff;
+                border: 1px solid #57595C;
+                border-radius: 10px;
+                text-align: center;
+                line-height: 42px;
+                font-size: 20px;
+                margin: auto;
+            }
+        }
+    }
+
+    &__meta {
+        @include flexbox();
+        align-items: center;
+        flex-wrap: wrap;
+
+        & span {
+            color: #57595c;
+
+            & i {
+                font-size: 20px;
+                margin-right: 5px;
+            }
+        }
+
+        & cite {
+            width: 2px;
+            height: 16px;
+            background: #57595c;
+            display: inline-block;
+            margin: 0 14px;
+        }
+    }
+
+    &__title {
+        font-size: 31px;
+        line-height: 1.25;
+
+        @media #{$lg} {
+            font-size: 28px;
+        }
+
+        @media #{$md,$xs} {
+            font-size: 27px;
+        }
+        &:hover{
+            color: var(--tp-theme-color);
+        }
+    }
+
+    &-2 {
+        border: 1px solid #57595C;
+        border-radius: 10px;
+        position: relative;
+
+        @media #{$xs} {
+            border-radius: 0;
+            padding: 5px;
+        }
+
+        & .mkblog {
+            &__thumb {
+                width: 200px;
+                @include transform(translateY(-12px));
+                flex: 0 0 auto;
+                margin-left: -1px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+
+                @media #{$xs} {
+                    position: static;
+                    width: 100%;
+                    height: auto;
+                    margin: auto;
+                    @include transform(translateY(0px));
+                }
+
+                & img {
+                    object-fit: cover;
+                    height: calc(100% + 24px);
+                }
+            }
+
+            &__content {
+                padding-top: 26px;
+                padding-bottom: 22px;
+                padding-left: 228px;
+                padding-right: 10px;
+
+                @media #{$xs} {
+                    padding: 25px;
+                }
+            }
+        }
+    }
+}

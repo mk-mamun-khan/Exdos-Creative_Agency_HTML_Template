@@ -1,0 +1,73 @@
+@use '../../utils' as *;
+
+
+/*----------------------------------------*/
+/*  6.2 Award
+/*----------------------------------------*/
+
+.mkaward-wrapper {
+    & .col-md-6:nth-child(even) {
+        & .mkaward {
+            padding-left: 55px;
+            border-left: 1px solid #57595c;
+
+            @media #{$xs} {
+                padding-left: 0px;
+                border-left: 0;
+            }
+        }
+    }
+
+    & .col-md-6:nth-child(-n+2) {
+        & .mkaward {
+            padding-top: 0;
+        }
+    }
+
+    // & .col-md-6:nth-child(2) {
+    //     & .mkaward {
+    //         padding-top: 0;
+    //     }
+    // }
+    & .col-md-6:nth-last-child(-n+2) {
+        & .mkaward {
+            padding-bottom: 0;
+            border-bottom: 0;
+
+            @media #{$xs} {
+                border-bottom: 1px solid #57595c;
+                padding-bottom: 37px;
+            }
+        }
+    }
+}
+
+.mkaward {
+    border-bottom: 1px solid #57595c;
+    padding: 37px 0;
+
+    @media #{$xs} {
+        padding-top: 37px !important;
+    }
+
+    &-wrapper {
+        padding-right: 80px;
+
+        @media #{$xl} {
+            padding-right: 25px;
+        }
+    }
+
+    & span {
+        font-family: var(--tp-fonts-header);
+        font-size: 20px;
+        color: #57595c;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        font-size: 30px;
+        margin: 0;
+    }
+}

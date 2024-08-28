@@ -1,0 +1,138 @@
+@use '../../utils' as *;
+
+
+/*----------------------------------------*/
+/*  6.4 Contact
+/*----------------------------------------*/
+
+.fs-100 {
+    font-size: 100px;
+
+    @media #{$xl} {
+        font-size: 85px;
+    }
+
+    @media #{$xs} {
+        font-size: 70px;
+    }
+}
+
+.mkform-title {
+    font-size: 30px;
+}
+
+.contact-form-box {
+
+    & input,
+    & textarea {
+        border-color: #57595C;
+    }
+}
+
+.mk-contact-img {
+    & img {
+        max-width: inherit;
+        margin-left: -40px;
+
+        @media #{$xl,$lg,$md,$xs} {
+            max-width: 100%;
+            margin-left: 0;
+        }
+    }
+}
+
+.mk-contact-form-box {
+
+    & input,
+    textarea {
+        border: 1px solid #57595C;
+        height: 60px;
+        padding-left: 25px;
+        border-radius: 10px;
+    }
+
+    & textarea {
+        height: 160px;
+    }
+
+    & .p-relative {
+        & i {
+            position: absolute;
+            right: 25px;
+            top: 20px;
+            font-size: 15px;
+            color: #57595C;
+        }
+    }
+
+}
+
+.mk-contact {
+    &-info {
+        border: 1px solid #57595C;
+        padding: 50px 45px;
+        border-radius: 15px;
+
+        @media #{$xl} {
+            padding: 45px 40px;
+        }
+
+        &-icon {
+            & i {
+                font-size: 85px;
+                color: #000;
+            }
+        }
+
+        &-text {
+            & span {
+                font-size: 15px;
+                font-weight: 500;
+                text-transform: uppercase;
+            }
+
+            & p {
+                font-size: 30px;
+                color: #0A0E1A;
+                line-height: 1.3;
+                font-family: var(--tp-fonts-header);
+                margin: 0;
+
+                @media #{$xl} {
+                    font-size: 25px;
+                }
+
+                @media #{$xs} {
+                    font-size: 25px;
+                }
+
+                @media #{$sm} {
+                    font-size: 30px;
+                }
+
+                & a {
+                    &:hover {
+                        color: var(--tp-theme-color);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mk-map iframe {
+    width: 100%;
+    height: 700px;
+
+    @media #{$xl} {
+        height: 600px;
+    }
+
+    @media #{$lg} {
+        height: 500px;
+    }
+
+    @media #{$md,$xs} {
+        height: 400px;
+    }
+}

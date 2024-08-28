@@ -1,0 +1,1 @@
+sass --watch "D:\New course for Envato\Exdos-project-start\assets\scss\main.scss":"D:\New course for Envato\Exdos-project-start\assets\css\style.css"

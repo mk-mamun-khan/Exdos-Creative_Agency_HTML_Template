@@ -1,0 +1,297 @@
+@use '../../utils' as *;
+
+
+/*----------------------------------------*/
+/*  6.14 Services
+/*----------------------------------------*/
+
+.mkservices {
+    border: 1px solid #57595C;
+    padding: 40px;
+    margin-right: -1px;
+    @include transition(.3s);
+
+    @media #{$xl} {
+        padding: 40px 30px;
+    }
+
+    &__icon {
+        & span {
+            font-size: 92px;
+            color: var(--tp-common-black);
+            display: inline-flex;
+            position: relative;
+            z-index: 2;
+        }
+
+        &-shape {
+            position: absolute;
+            top: -6px;
+            left: 0;
+            z-index: 1;
+        }
+    }
+
+    &__title {
+        font-size: 30px;
+        font-weight: 400;
+
+        @media #{$xl} {
+            font-size: 27px;
+        }
+
+        @media #{$lg} {
+            font-size: 28px;
+        }
+
+        @media #{$md} {
+            font-size: 27px;
+        }
+        &:hover{
+            color: var(--tp-theme-color);
+        }
+    }
+
+    &__list {
+        & ul {
+            & li {
+                color: #57595C;
+                margin-bottom: 6px;
+
+                &::before {
+                    background-color: #57595C;
+                    content: "";
+                    height: 8px;
+                    width: 8px;
+                    display: inline-block;
+                    border-radius: 30px;
+                    margin-right: 10px;
+                    @include transform(translateY(-1px));
+                }
+            }
+        }
+    }
+
+    &:hover {
+        background-color: var(--tp-rom-color);
+
+        & .mk-sv-btn {
+            background-color: var(--tp-theme-color);
+            color: #fff;
+        }
+    }
+
+    &-2 {
+        margin-top: -1px;
+        padding-bottom: 14px;
+
+        & .mkservices__icon {
+            & span {
+                font-size: 60px;
+                color: var(--tp-common-black);
+                display: inline-flex;
+                margin-left: 22px;
+            }
+        }
+    }
+
+}
+
+.mkservices__icon-btn {
+    & a {
+        font-size: 45px;
+        display: inline-flex;
+
+        &:hover {
+            color: var(--tp-theme-orange);
+        }
+    }
+}
+
+.mk-sv-btn {
+    background: var(--tp-rom-color);
+    display: block;
+    padding: 6px 28px;
+    font-size: 18px;
+    font-family: var(--tp-fonts-header);
+    @include flexbox();
+    justify-content: space-between;
+    align-items: center;
+    @include transition(.3s);
+    border-radius: 5px;
+
+    & i {
+        @include transform(rotate(-45deg));
+    }
+}
+
+.mkservices-4-spacing {
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.mk-services-bg-area {
+    background-color: #D6F0FF;
+    border-radius: 140px;
+
+    @media #{$md,$xs} {
+        border-radius: 0px;
+    }
+}
+
+.mksvtab {
+    border-bottom: 1px solid #3a3e48;
+    padding: 20px 0;
+    padding-bottom: 30px;
+
+    &__number {
+        color: #B1B4BA;
+        margin-top: 13px;
+    }
+
+    &__title {
+        font-size: 100px;
+
+        @media #{$xl} {
+            font-size: 55px;
+        }
+
+        @media #{$lg} {
+            font-size: 45px;
+        }
+
+        @media #{$md} {
+            font-size: 80px;
+        }
+
+        @media #{$xs} {
+            font-size: 32px;
+        }
+    }
+
+    &__content {
+        & p {
+            color: #B1B4BA;
+            margin: 0;
+        }
+    }
+}
+
+.mk-service-tab {
+    &-wrapper {
+        @media #{$lg} {
+            padding-left: 35px;
+        }
+
+        @media #{$md,$xs} {
+            padding-left: 0px;
+        }
+    }
+
+    & .nav-links:first-child {
+        & .mksvtab {
+            border-top: 1px solid #3a3e48;
+        }
+    }
+
+    & .active {
+        & .mksvtab__title {
+            color: var(--tp-theme-orange-2);
+        }
+    }
+}
+
+
+.mk-services-widget {
+    background: #FBF6EF;
+    padding: 40px;
+
+    @media #{$xl} {
+        padding: 30px;
+    }
+
+    & ul {
+        & li {
+            margin-bottom: 15px;
+
+            & a {
+                color: #57595C;
+                display: block;
+                padding: 20px 25px;
+                line-height: 1;
+                position: relative;
+                background-color: #fff;
+                border: 1px solid #57595C;
+                border-radius: 5px;
+                transition: .3s;
+
+                &:hover {
+                    background-color: var(--tp-theme-color);
+                    color: #fff;
+                    border-color: var(--tp-theme-color);
+
+                    &::after {
+                        color: var(--tp-theme-color-2);
+                    }
+                }
+
+                &::after {
+                    content: "\f061";
+                    font-family: "Font Awesome 5 pro";
+                    position: absolute;
+                    right: 25px;
+                    top: 50%;
+                    transform: translateY(-50%) rotate(-40deg);
+                }
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &-title {
+        & span {
+            width: 10px;
+            height: 10px;
+            background: var(--tp-theme-color);
+            border-radius: 30px;
+            display: inline-block;
+            margin-right: 5px;
+            transform: translateY(-3px);
+        }
+    }
+}
+
+.mk-services-widget-banner-text {
+    position: absolute;
+    bottom: 50px;
+    left: 40px;
+    right: 40px;
+    text-align: center;
+}
+
+.mk-services-details-list-item {
+    background: #FBF6EF;
+    padding: 20px 30px;
+
+    & span {
+        width: 50px;
+        height: 50px;
+        background: #0057FC;
+        color: #fff;
+        font-size: 24px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 50px;
+        font-family: var(--tp-fonts-header);
+        flex: 0 0 auto;
+    }
+}
+
+.mk-services-details-list-title {
+    @media #{$lg} {
+        font-size: 25px;
+    }
+}

@@ -1,0 +1,108 @@
+@use '../utils' as *;
+
+
+/*----------------------------------------*/
+/*  2.9 Section Title
+/*----------------------------------------*/
+
+.mk-section {
+    &-subtitle {
+        font-weight: 500;
+        font-size: 15px;
+        text-transform: uppercase;
+        color: #57595c;
+        display: block;
+
+        &-white {
+            color: #A3AEC3;
+        }
+
+        & i {
+            width: 10px;
+            height: 10px;
+            background: var(--tp-theme-color);
+            display: inline-block;
+            border-radius: 30px;
+
+            &.dot-color {
+                background: var(--tp-theme-orange);
+            }
+        }
+    }
+
+    &-title {
+        font-size: 60px;
+        font-family: var(--tp-fonts-header);
+
+        &-white {
+            color: #fff;
+        }
+        &.mk-fs-40{
+            font-size: 40px;
+        }
+
+        & br {
+            @media #{$xs} {
+                display: none;
+            }
+        }
+
+        @media #{$lg} {
+            font-size: 55px;
+        }
+
+        @media #{$md} {
+            font-size: 40px;
+        }
+
+        @media #{$xs} {
+            font-size: 39px;
+        }
+
+        &-br {
+            & br {
+                @media #{$xl,$lg,$md,$xs} {
+                    display: none;
+                }
+            }
+        }
+
+        &-wrapper {
+            & p {
+                & br {
+                    @media #{$xs} {
+                        display: none;
+                    }
+                }
+            }
+
+            &-5 {
+                @media #{$md,$xs} {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        &-content-white {
+            color: #A3AEC3;
+
+            & b {
+                color: #fff;
+            }
+        }
+
+        &-40 {
+            font-size: 40px;
+
+            @media #{$xs} {
+                font-size: 23px;
+            }
+        }
+    }
+}
+
+.xl-fns-45 {
+    @media #{$xl} {
+        font-size: 45px;
+    }
+}

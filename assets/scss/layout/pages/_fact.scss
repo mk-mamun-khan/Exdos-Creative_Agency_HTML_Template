@@ -1,0 +1,130 @@
+@use '../../utils' as *;
+
+
+/*----------------------------------------*/
+/*  6.6 Fact
+/*----------------------------------------*/
+
+.custom-row {
+    @include flexbox();
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media #{$xs} {
+        justify-content: center;
+    }
+}
+
+.mkfact {
+    &__title {
+        font-size: 30px;
+        color: #fff;
+        opacity: .5;
+
+        @media #{$xl} {
+            font-size: 18px;
+        }
+
+        @media #{$md} {
+            font-size: 20px;
+        }
+    }
+
+    &__icon {
+        & span {
+            font-size: 110px;
+            color: var(--tp-theme-color-2);
+
+            @media #{$xl} {
+                font-size: 60px;
+            }
+        }
+    }
+
+    &__text {
+        & span {
+            font-size: 100px;
+            color: #fff;
+            font-family: var(--tp-fonts-header);
+            display: inline-block;
+            line-height: 1;
+
+            @media #{$xs} {
+                font-size: 75px;
+            }
+
+            @media #{$md} {
+                font-size: 60px;
+            }
+        }
+    }
+
+    &-2 {
+        & .mkfact {
+            &__icon {
+                & span {
+                    color: #57595C;
+                }
+
+                &-2 {
+                    position: relative;
+
+                    & span {
+                        color: var(--tp-theme-orange);
+                    }
+
+                    &::after {
+                        width: 1px;
+                        height: 100px;
+                        background-color: #D9D9D9;
+                        position: absolute;
+                        content: "";
+                        right: 0;
+                        top: 10px;
+
+                        @media #{$xl} {
+                            height: 70px;
+                            top: 0;
+                        }
+                    }
+                }
+            }
+
+            &__title {
+                color: #0A0E1A;
+                opacity: 1;
+            }
+
+            &__text {
+                & span {
+                    color: #0A0E1A;
+
+                    @media #{$xl} {
+                        font-size: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cols {
+    @media #{$md,$sm} {
+        width: 50%;
+    }
+}
+
+.mk-about-fact {
+    &-box {
+        @media #{$xs} {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+}
+
+.mk-fact-img {
+    & img {
+        width: 100%;
+    }
+}
